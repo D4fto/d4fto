@@ -6,6 +6,7 @@
     
 }
 body{
+    
     color: white;
     font-family:cursive;
     background-color: rgb(66, 66, 66); 
@@ -32,9 +33,9 @@ body{
 .menu_vertical::-webkit-scrollbar-track{
     margin-top: 70px;
 }
-p,h1,h2{
-    margin-left: 300px;
-    margin-right: 300px;
+.text_box{
+    width: 80vw;
+    margin: 0 auto;
 }
 h1{
     

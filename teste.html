@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=”en”>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .background-image {
-            background-repeat:no-repeat;
-            position: fixed;
-            left: 0;
-            right: 0;
-            z-index: 1;
-        
-            display: block;
-            background-image: url('https://cdn.pixabay.com/photo/2014/12/21/17/02/night-575008_960_720.jpg');
-            height: 1000px;
-            width: 1500px;
-            -webkit-filter: blur(5px);
-            filter: blur(5px);
-            -moz-filter: blur(5px);
-            -o-filter: blur(5px);
-            -ms-filter: blur(5px);
-        
-        }
-        .conteudo {
-            left: 0;
-            right: 0;
-            z-index: 9999;
-            position: fixed;
-            margin-left: 120px;
-            margin-right: 50px;
-            color:#fff;
-        }
-        </style>
-            
+<meta charset=”UTF-8″>
+<title>This is a simple page title</title>
+<style>
+  .tenis{
+    position: absolute;
+    background-color: white;
+    top: 100px;
+    left: 100px;
+    animation: giro 1000ms infinite ;
+    z-index: 1;
+  }
+  @keyframes giro{
+    0%{
+      opacity: 0%;
+      left:100px;
+      rotate: 0deg;
+    }
+    50%{
+      opacity: 100%;
+      left:400px;
+      rotate:0deg
+    }
+    100%{
+      opacity: 0%;
+      left:100px;
+      rotate: 0deg;
+    }
+  }
+</style>
 </head>
 <body>
-    <div></div>
-    <div class="background-image"></div>
-    <div class="conteudo">
-    <h2>APLICANDO EFEITO BLUR CSS3 EM BACKGROUND-IMAGE</h2>
-    </div>
+<div class="tenis">
+<div style=" height:50px; width:50px; border-radius: 100%; position: absolute;top: 0px; border: 5px solid; border-color: rgb(255,200,150)"></div>
+<div style="height:50px; width:50px; border-radius: 100%; position: absolute;top:55px;border: 5px solid; border-color: rgb(255,200,150)"></div>
+<div style="position: absolute;left:90px"><div style=" height:10px; width:50px; position: absolute;top: 20px; background-color: rgb(255,200,150)"></div>
+<div style="height:10px; width:50px; position: absolute;top:55px; background-color: rgb(255,200,150)"></div></div>
+<div style="position: absolute;left:170px;background-color: white;height:110px;width:100px"><div style=" height:10px; width:50px; position: absolute;top: 20px; background-color: rgb(255,200,150)"></div>
+<div style="height:10px; width:50px; position: absolute;top:55px; background-color: rgb(255,200,150)"></div></div>
+<div style="position:absolute; left: 250px; top:0px; height:110px;width:100px; overflow:hidden">
+<div style=" background-color: white; height:100px; width:100px; border-radius: 100%; position: absolute;top: 0px; left:-50px; border: 5px solid; border-color: rgb(255,150,150)"></div>
+<div style="height:110px; width:5px; position: absolute;top:0px; background-color: rgb(255,150,150)"></div></div>
+</div>
+
 </body>
 </html>
