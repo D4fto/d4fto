@@ -1,11 +1,13 @@
 *{
     
     padding: 0px;
+    
     margin: 0px;
+    
 }
 body{
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:cursive;
     background-color: rgb(66, 66, 66); 
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -30,7 +32,10 @@ body{
 .menu_vertical::-webkit-scrollbar-track{
     margin-top: 70px;
 }
-
+p,h1,h2{
+    margin-left: 300px;
+    margin-right: 300px;
+}
 h1{
     
     text-align: center;
@@ -47,6 +52,7 @@ h2{
     padding: 30px;
     margin-left: 300px;
     margin-right: 300px;
+    padding-bottom: 200px;
     
 }
 svg{
@@ -152,17 +158,27 @@ path{
     background-color: rgba(0, 0, 0, 0.1);
 }
 #titulo_principal{
-    
-    
     background-position: 0px -250px;
     backdrop-filter: brightness(60%);
 }
-.back_img{
-    background-size: cover;
-    z-index: -1;
-    filter: brightness(40%);
-    height: 541px;
-    width: 100vw;
-    background-image: url(../manol.jpeg);
-    position: absolute;
+p{
+    text-align: justify;
+    padding: 15px;
+    font-size: 1.3rem;
+}
+span{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    animation: cores 1s infinite linear;
+}
+@keyframes cores {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
 }
