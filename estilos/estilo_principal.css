@@ -42,8 +42,10 @@ body{
     margin-top: 70px;
 }
 .text_box{
+    padding: 15px;
     width: 80vw;
     margin: 0 auto;
+    overflow-wrap: break-word;
 }
 h1{
     font-family: 'fontetitulo';
@@ -171,13 +173,13 @@ path{
     backdrop-filter: brightness(60%);
 }
 p{
-    text-align: justify;
+    text-align: left;
     padding: 15px;
     font-size: 1.3rem;
 }
 span{
     color: rgb(255, 255, 255);
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.795);
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 15px;
