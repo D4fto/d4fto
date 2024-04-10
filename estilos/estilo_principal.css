@@ -5,10 +5,18 @@
     margin: 0px;
     
 }
+@font-face {
+    font-family: fontetitulo;
+    src: url(../fontes/A\ Friend\ In\ Deed.otf)
+}
+@font-face {
+    font-family: fontetexto;
+    src: url(../fontes/A\ FOR\ A.ttf)
+}
 body{
-    
+    letter-spacing: 5px;
     color: white;
-    font-family:cursive;
+    font-family:"fontetexto";
     background-color: rgb(66, 66, 66); 
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -38,13 +46,12 @@ body{
     margin: 0 auto;
 }
 h1{
-    
+    font-family: 'fontetitulo';
     text-align: center;
-    font-family: cursive;
-    -webkit-text-stroke-width: 3px; 
+    -webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: black; 
     
-    font-size: 8rem;
+    font-size: 10rem;
     padding-top: 100px;
     
 }
