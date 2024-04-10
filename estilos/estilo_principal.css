@@ -51,8 +51,7 @@ h1{
 h2{
     text-align: center;
     padding: 30px;
-    margin-left: 300px;
-    margin-right: 300px;
+
     padding-bottom: 200px;
     
 }
@@ -135,6 +134,7 @@ path{
 .menu_horizontal ul{
     
     margin-left: 70px;
+    text-wrap: nowrap;
 }
 .menu_horizontal ul li{
     display: inline-block;
@@ -147,9 +147,9 @@ path{
 .menu_horizontal ul li a{
     transition: all 500ms;
     line-height: 70px;
-    padding: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
