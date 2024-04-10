@@ -129,6 +129,7 @@ path{
     font-size: 2rem;
 }
 .menu_horizontal{
+    overflow: auto;
     z-index: 2;
     text-align: center;
     position: fixed;
@@ -154,9 +155,9 @@ path{
 .menu_horizontal ul li a{
     transition: all 500ms;
     line-height: 70px;
-    padding: 1vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
