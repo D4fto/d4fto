@@ -47,6 +47,11 @@ body{
 .menu_vertical::-webkit-scrollbar-track{
     margin-top: 70px;
 }
+
+.menu_horizontal::-webkit-scrollbar{
+    height: 0px;
+}
+
 .text_box{
     padding: 15px;
     width: 80vw;
@@ -76,8 +81,7 @@ svg{
     position: fixed;
     
     top: 0px;
-
-    background-color: none;
+    background-color: rgb(58, 57, 65);
     width: 40px; 
     height: 40px; 
     padding: 15px;
@@ -85,7 +89,7 @@ svg{
     transition: 500ms;
 }
 svg:hover{
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgb(29, 29, 33);
     
 }
 path{
@@ -194,7 +198,7 @@ span{
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 15px;
-    animation: cores 1s infinite linear;
+    animation: cores 5s infinite linear;
 }
 @keyframes cores {
     0%{
