@@ -18,12 +18,15 @@
     src: url(../fontes/Minecrafter.Reg.ttf)
 }
 body{
-    letter-spacing: 2px;
+    
     color: white;
-    font-family:"fontetexto";
-    background-color: rgb(30, 30, 37); 
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(12, 12, 15); 
     background-repeat: no-repeat;
     background-size: 100vw;
+}
+::selection{
+    background: gold;
 }
 ::-webkit-scrollbar{
     
@@ -32,12 +35,12 @@ body{
 ::-webkit-scrollbar-track{
     
 
-    background: rgb(58, 57, 65);
+    background: rgb(29, 29, 33);
 }
 ::-webkit-scrollbar-thumb{
     border: 5px solid;
 
-    border-color: rgb(58, 57, 65);
+    border-color: rgb(29, 29, 33);
     background: rgb(197, 197, 197);
     border-radius: 10px;
 }
@@ -64,14 +67,15 @@ h1{
     -webkit-text-stroke-width: 2px; 
     -webkit-text-stroke-color: black; 
     letter-spacing: 0px;
-    font-size: 8rem;
+    font-size: 8em;
     padding-top: 100px;
     
 }
 h2{
-    font-family: 'fontetitulo';
+    font-style: italic;
+    font-family: cursive;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5em;
     padding: 30px;
     font-weight: 900;
     
@@ -81,7 +85,7 @@ svg{
     position: fixed;
     
     top: 0px;
-    background-color: rgb(58, 57, 65);
+    background-color: rgb(29, 29, 33);
     width: 40px; 
     height: 40px; 
     padding: 15px;
@@ -142,7 +146,8 @@ path{
     transition: all 500ms;
 }
 .menu_vertical ul li a:hover{
-    background-color: rgba(10, 10, 10, 0.95);
+    animation: cores 5s infinite linear;
+    background-color: rgba(255, 0, 0, 0.95);
     font-size: 2rem;
 }
 .menu_horizontal{
@@ -155,7 +160,7 @@ path{
     left: 0px;
     width: 100vw;
     height: 70px;
-    background-color: rgb(58, 57, 65);
+    background-color: rgb(29, 29, 33);
 }
 .menu_horizontal ul{
     
@@ -167,7 +172,8 @@ path{
     transition: all 500ms;
 }
 .menu_horizontal ul li:hover{
-    background-color: rgba(10, 10, 10, 0.5);
+    animation: cores 5s infinite linear;
+    background-color: rgba(255, 0, 0, 0.5);
     display: inline-block;
 }
 .menu_horizontal ul li a{
