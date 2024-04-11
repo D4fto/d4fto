@@ -142,7 +142,8 @@ path{
     font-size: 2rem;
 }
 .menu_horizontal{
-    overflow-x: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
     z-index: 2;
     text-align: center;
     position: fixed;
