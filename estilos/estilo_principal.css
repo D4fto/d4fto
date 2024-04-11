@@ -134,10 +134,10 @@ path{
     margin-top: 70px;
     list-style: none;
 }
-.menu_vertical ul li{
+.menu_vertical li{
     padding: 0px;
 }
-.menu_vertical ul li a{
+.menu_vertical a{
     padding: 15px;
     font-size: 1.5rem;
     text-decoration: none;
@@ -145,7 +145,7 @@ path{
     color: white;
     transition: all 500ms;
 }
-.menu_vertical ul li a:hover{
+.menu_vertical a:hover{
     animation: cores 5s infinite linear;
     background-color: rgba(255, 0, 0, 0.95);
     font-size: 2rem;
@@ -167,16 +167,16 @@ path{
     margin-left: 70px;
     text-wrap: nowrap;
 }
-.menu_horizontal ul li{
+.menu_horizontal li{
     display: inline-block;
     transition: all 500ms;
 }
-.menu_horizontal ul li:hover{
+.menu_horizontal li:hover{
     animation: cores 5s infinite linear;
     background-color: rgba(255, 0, 0, 0.5);
     display: inline-block;
 }
-.menu_horizontal ul li a{
+.menu_horizontal a{
     transition: all 500ms;
     line-height: 70px;
     padding: 15px;
@@ -186,7 +186,7 @@ path{
     text-decoration: none;
     color: white;
 }
-.menu_horizontal ul li a:hover{
+.menu_horizontal a:hover{
     font-size: 2rem;
 }
 #titulo_principal{
