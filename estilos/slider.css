@@ -1,0 +1,71 @@
+
+.slider{
+    height: fit-content;
+    width: 80vw;
+    overflow: hidden;
+    display: flex;
+}
+.slider_imgs{
+    display: flex;
+    transition: 500ms;
+}
+
+.slider_imgs img{
+    width: 80vw;
+    border-radius: 1vw;
+}
+
+.slider_radio_label{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    width: 80vw;
+}
+.slider_container input{
+    display: none;
+}
+
+.radio_label{
+    border: 5px solid;
+    padding: 15px;
+    border-radius: 50%;
+    transition: 1s;
+    margin-top: 25px;
+}
+.radio_label:not(:last-child){
+    margin-right: 25px;
+}
+.radio_label:hover{
+    background-color: rgb(214, 175, 0);
+    border-color: rgb(214, 175, 0);
+}
+
+#radio1:checked~.slider_radio_label .radio1_label{
+    background-color: rgb(214, 175, 0);
+    border-color: rgb(214, 175, 0);
+}
+#radio2:checked~.slider_radio_label .radio2_label{
+    background-color: rgb(214, 175, 0);
+    border-color: rgb(214, 175, 0);
+}
+#radio3:checked~.slider_radio_label .radio3_label{
+    background-color: rgb(214, 175, 0);
+    border-color: rgb(214, 175, 0);
+}
+#radio4:checked~.slider_radio_label .radio4_label{
+    background-color: rgb(214, 175, 0);
+    border-color: rgb(214, 175, 0);
+}
+#radio1:checked~.slider .slider_imgs{
+    margin-left: 0%;
+}
+#radio2:checked~.slider .slider_imgs{
+    margin-left: -100%;
+}
+#radio3:checked~.slider .slider_imgs{
+    margin-left: -200%;
+}
+#radio4:checked~.slider .slider_imgs{
+    margin-left: -300%;
+}
