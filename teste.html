@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html lang=”en”>
+<html lang="en">
 <head>
-<meta charset=”UTF-8″>
-<title>This is a simple page title</title>
-<style>
-  .tenis{
-    position: absolute;
-    background-color: white;
-    top: 100px;
-    left: 100px;
-    animation: giro 1000ms infinite ;
-    z-index: 1;
-  }
-  @keyframes giro{
-    0%{
-      opacity: 0%;
-      left:100px;
-      rotate: 0deg;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    50%{
-      opacity: 100%;
-      left:400px;
-      rotate:0deg
+    .conteiner{
+      max-width: 1080px;
+      margin: 0 auto;
+      display: inline;
+      align-items: center;
+      justify-content: center;
     }
-    100%{
-      opacity: 0%;
-      left:100px;
-      rotate: 0deg;
+    header{
+      
+      background-color: black;
+      width: 100%;
     }
-  }
-</style>
+    .logo,.compre{
+      width: 25%;
+    }
+    .menu{
+      width: 50%;
+    }
+  
+
+  </style>
 </head>
 <body>
-<div class="tenis">
-<div style=" height:50px; width:50px; border-radius: 100%; position: absolute;top: 0px; border: 5px solid; border-color: rgb(255,200,150)"></div>
-<div style="height:50px; width:50px; border-radius: 100%; position: absolute;top:55px;border: 5px solid; border-color: rgb(255,200,150)"></div>
-<div style="position: absolute;left:90px"><div style=" height:10px; width:50px; position: absolute;top: 20px; background-color: rgb(255,200,150)"></div>
-<div style="height:10px; width:50px; position: absolute;top:55px; background-color: rgb(255,200,150)"></div></div>
-<div style="position: absolute;left:170px;background-color: white;height:110px;width:100px"><div style=" height:10px; width:50px; position: absolute;top: 20px; background-color: rgb(255,200,150)"></div>
-<div style="height:10px; width:50px; position: absolute;top:55px; background-color: rgb(255,200,150)"></div></div>
-<div style="position:absolute; left: 250px; top:0px; height:110px;width:100px; overflow:hidden">
-<div style=" background-color: white; height:100px; width:100px; border-radius: 100%; position: absolute;top: 0px; left:-50px; border: 5px solid; border-color: rgb(255,150,150)"></div>
-<div style="height:110px; width:5px; position: absolute;top:0px; background-color: rgb(255,150,150)"></div></div>
-</div>
-
+    <div class="container">
+      <div class="logo">
+        <img src="./manol.jpeg">
+      </div>
+      <div class="menu">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">blog</a>
+          <a href="#">sobre</a>
+          <a href="#">contatos</a>
+        </nav>
+      </div>
+      <div class="compre">
+        <button>compre sua passagem</button>
+      </div>
+    </div>
 </body>
 </html>
