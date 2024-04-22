@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Gomes</title>
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./checkbox.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <nav class="menu_horizontal" >
+            <ul>
+                <li><a href="#">Loja</a></li>
+                <li><a href="#">Carrinho</a></li>
+                <li><a href="#">Biblioteca</a></li>
+            </ul>
+            <input type="button" value="conta_button" id="conta_button" class="invisivel">
+            <label for="conta_button">
+                <div style="right: 0px;">
+                    <img src="./user.png" alt="user">
+                </div>
+            </label>
+        
+            <input type="button" value="voltar" id="voltar" onclick="history.go(-1)" class="invisivel">
+            <label for="voltar">
+                <div style="left: 0px;">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </div>
+            </label>
+        </nav>
+    </header>
+    <nav class="menu_vertical">
+        <ul>
+            <li><form action="#" method="post" id="pesquisa"><input type="text" name="procura" id="procura" placeholder="Search..."></form></li>
+            <div class="separator"><svg><g><path d="M0 5 L500 5" style="stroke: rgb(109, 124, 148); stroke-width: 1px;"></path></g></svg> </div>
+            <li>
+                <header>filtrar por preço</header>
+                <div class="caixa_filtros">
+                    <div class="range_preco"><input type="range" name="preco" id="preco" min="0" max="100"></div>
+                </div>
+            </li>
+            <div class="separator"><svg><g><path d="M0 5 L500 5" style="stroke: rgb(109, 124, 148); stroke-width: 1px;"></path></g></svg> </div>
+            <li>
+                <header>fitrar por genero</header>
+                <div class="caixa_filtros">
+                    <ul>
+                        <li><div class="checkbox"><input type="checkbox" name="genero1" id="genero1"><label for="genero1">FPS</label></div></li>
+                        <li><div class="checkbox"><input type="checkbox" name="genero2" id="genero2"><label for="genero2">Battle Royale</label></div></li>
+                        <li><div class="checkbox"><input type="checkbox" name="genero3" id="genero3"><label for="genero3">PVP</label></div></li>
+                        <li><div class="checkbox"><input type="checkbox" name="genero4" id="genero4"><label for="genero4">MOBA</label></div></li>
+                        <li><div class="checkbox"><input type="checkbox" name="genero5" id="genero5"><label for="genero5">RPG</label></div></li>
+                        <li><div class="checkbox"><input type="checkbox" name="genero6" id="genero6"><label for="genero6">Aventura</label></div></li>
+                        <li><div class="checkbox"><input type="checkbox" name="genero7" id="genero7"><label for="genero7">Sandbox</label></div></li>
+                    </ul>
+                </div>
+            </li>
+            </ul>
+    </nav>
+    <div id="painel">
+        <div>
+            <input type="checkbox" name="loggin" id="loggin" value="Loggin">
+            <label for="loggin">Login?</label>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

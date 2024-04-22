@@ -189,7 +189,6 @@ path{
 }
 .menu_horizontal li:hover{
     background-color: rgb(214, 175, 0);
-    display: inline-block;
 }
 .menu_horizontal a{
     transition: all 500ms;
