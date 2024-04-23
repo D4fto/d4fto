@@ -125,7 +125,13 @@ body{
     width: calc(100vw - var(--menu-vertical-width));
 }
 .menu_vertical{
+<<<<<<< HEAD
     background-color: var(--menu-vertical-color);
+=======
+    position: fixed;
+    overflow: scroll;
+    background-color: color-mix(in srgb, var(--menu-horizontal-color) 100%, rgb(0, 0, 0) 10%);
+>>>>>>> b6edf5f90bd306a3f7319d779dd454d8c48db1cb
     z-index: 2;
     
     overflow-y: scroll;
