@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,33 +35,76 @@
     <nav class="menu_vertical">
         <ul>
             <li><form action="#" method="post" id="pesquisa"><input type="text" name="procura" id="procura" placeholder="Search..."></form></li>
-            <div class="separator"><svg><g><path d="M0 5 L500 5" style="stroke: rgb(109, 124, 148); stroke-width: 1px;"></path></g></svg> </div>
+            <div class="separator"><svg><g><path d="M0 5 L500 5" style="stroke: rgb(32, 43, 61); stroke-width: 1px;"></path></g></svg> </div>
             <li>
-                <header>filtrar por preço</header>
-                <div class="caixa_filtros">
-                    <div class="range_preco"><input type="range" name="preco" id="preco" min="0" max="100"></div>
+                <input type="checkbox" name="chec_price" id="price" class="invisivel filtros" checked>
+                <label for="price">
+                    <header>Filtrar por preço</header>
+                </label>
+                <div class="caixa_filtros_container" id="price_container">
+                    <div class="caixa_filtros">
+                        <ul>
+                            <li><div class="range_preco"><form><input type="range" name="preco" id="preco" min="0" max="130" step="10"oninput="x.value=preco.value" value="130"><br><p id="preco_output">Por até <output name="x" for="preco"></output>,00 R$</p><p id="qualquer">Qualquer preço</p><p id="gratis">Gratuito</p></form></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="spc_offer" id="spc_offer"><label for="spc_offer">Ofertas especiais</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="ocult_gratis" id="ocult_gratis"><label for="ocult_gratis">Ocultar gratuitos</label></div></li>
+                        </ul>
+                    </div>
                 </div>
             </li>
-            <div class="separator"><svg><g><path d="M0 5 L500 5" style="stroke: rgb(109, 124, 148); stroke-width: 1px;"></path></g></svg> </div>
+            <div class="separator"><svg><g><path d="M0 5 L500 5" style="stroke: rgb(32, 43, 61); stroke-width: 1px;"></path></g></svg> </div>
             <li>
-                <header>fitrar por genero</header>
-                <div class="caixa_filtros">
-                    <ul>
-                        <li><div class="checkbox"><input type="checkbox" name="genero1" id="genero1"><label for="genero1">FPS</label></div></li>
-                        <li><div class="checkbox"><input type="checkbox" name="genero2" id="genero2"><label for="genero2">Battle Royale</label></div></li>
-                        <li><div class="checkbox"><input type="checkbox" name="genero3" id="genero3"><label for="genero3">PVP</label></div></li>
-                        <li><div class="checkbox"><input type="checkbox" name="genero4" id="genero4"><label for="genero4">MOBA</label></div></li>
-                        <li><div class="checkbox"><input type="checkbox" name="genero5" id="genero5"><label for="genero5">RPG</label></div></li>
-                        <li><div class="checkbox"><input type="checkbox" name="genero6" id="genero6"><label for="genero6">Aventura</label></div></li>
-                        <li><div class="checkbox"><input type="checkbox" name="genero7" id="genero7"><label for="genero7">Sandbox</label></div></li>
-                    </ul>
+                <input type="checkbox" name="chec_gen" id="gen" class="invisivel filtros" checked> 
+                <label for="gen">
+                    <header>Fitrar por genero</header>
+                </label>
+                <div class="caixa_filtros_container" id="gen_container">
+                    <div class="caixa_filtros">
+                        <ul>
+                            <li><div class="checkbox"><input type="checkbox" name="genero1" id="genero1"><label for="genero1">FPS</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="genero2" id="genero2"><label for="genero2">Battle Royale</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="genero3" id="genero3"><label for="genero3">PVP</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="genero4" id="genero4"><label for="genero4">MOBA</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="genero5" id="genero5"><label for="genero5">RPG</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="genero6" id="genero6"><label for="genero6">Aventura</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="genero7" id="genero7"><label for="genero7">Sandbox</label></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <div class="separator"><svg><g><path d="M0 5 L500 5" style="stroke: rgb(32, 43, 61); stroke-width: 1px;"></path></g></svg> </div>
+            <li>
+                <input type="checkbox" name="chec_idm" id="idm" class="invisivel filtros">
+                <label for="idm">
+                    <header>Fitrar por idioma</header>
+                </label>
+                <div class="caixa_filtros_container" id="idm_container">
+                    <div class="caixa_filtros">
+                        <ul>
+                            <li><div class="checkbox"><input type="checkbox" name="brazilian" id="idioma1"><label for="idioma1">Português (Brasil)</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="schinese" id="idioma2"><label for="idioma2">Chinês simplificado</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="tchinese" id="idioma3"><label for="idioma3">Chinês tradicional</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="japanese" id="idioma4"><label for="idioma4">Japonês</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="koreana" id="idioma5"><label for="idioma5">Coreano</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="thai" id="idioma6"><label for="idioma6">Tailandês</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="bulgarian" id="idioma7"><label for="idioma7">Búlgaro</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="czech" id="idioma8"><label for="idioma8">Tcheco</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="danish" id="idioma9"><label for="idioma9">Dinamarquês</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="german" id="idioma10"><label for="idioma10">Alemão</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="english" id="idioma11"><label for="idioma11">Inglês</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="spanish" id="idioma12"><label for="idioma12">Espanhol (Espanha)</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="latam" id="idioma13"><label for="idioma13">Espanhol (América Latina)</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="greek" id="idioma14"><label for="idioma14">Grego</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="french" id="idioma15"><label for="idioma15">Francês</label></div></li>
+                            <li><div class="checkbox"><input type="checkbox" name="italian" id="idioma16"><label for="idioma16">Italiano</label></div></li>
+                        </ul>
+                    </div>
                 </div>
             </li>
             </ul>
     </nav>
     <div id="painel">
         <div>
-            <input type="checkbox" name="loggin" id="loggin" value="Loggin">
+            <input type="checkbox" name="loggin" id="loggin" value="Loggin" checked>
             <label for="loggin">Login?</label>
         </div>
     </div>
