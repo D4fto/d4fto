@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --container-principal-width: 453px;
+            --default-background-color: rgb(255, 207, 233);
+        }
+        *{
+            margin: 10px auto;
+        }
+        body{
+            display: flex;
+            padding: 50px;
+            justify-content: center;
+            background-color: var(--default-background-color);
+        }
+        #container_principal{
+            width: var(--container-principal-width);
+            display: flex;
+        }
+        .container_secundario{
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            
+            width: calc(var(--container-principal-width)/2);
+            
+        }
+        img{
+            width: 90%;
+            padding: 0;
+            margin: 0;
+            background-color: blue;
+        }
+        h1{
+            
+            margin-top: 0px;
+            color: #D23275;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 1px 1px 1px black;
+            line-height: 100%;
+            font-size: 6em;
+            overflow-wrap: break-word;
+            
+        }
+        h2{
+            margin-top: 5px;
+            color: #D53578;
+            font-size: 1em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .tabela_title{
+            background-color: #F7B2D4;
+            padding: 5px 15px;
+            margin-bottom: 0;
+            border: 1px solid #D43376;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .tabela{
+            width: 90%;
+            text-align: left;
+        }
+        .tabela_content{
+            padding: 15px;
+            font-weight: 500;
+            line-height: 150%;
+            font-size: 1em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+            margin: 0 auto;
+            border: 1px solid #D43376;
+            border-top: none;
+        }
+        .tabela2{
+            margin-top: 0px;
+            padding: 0px auto;
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            
+            height: 170px;
+            width: 90%;
+        }
+        .tabela2 .tabela{
+            margin: 0px;
+        }
+        .tabela2 .tabela_title{
+            height: 20px;
+            margin-top: 0px;
+            line-height: 20px;
+        }
+        .tabela2 .tabela_title p{
+
+            margin: 0;
+        }
+        .tabela2 .tabela_content{
+            height:92px;
+            font-weight: 700;
+            font-size: 0.7em;
+            line-height: 1em;
+        }
+        .container_text{
+            width: 90%;
+            overflow: hidden;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container_text strong{
+            font-size: 1.5em;
+        }
+        .container_text p{
+            margin: 0;
+            padding-top: 0;
+            font-weight: 600;
+        }
+        svg{
+            height: 4px;
+        }
+        a{
+            color: unset;
+        }
+        ::-webkit-scrollbar{
+            background: none;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: #D53578;
+            border-radius: 10px;
+            border: 4px solid;
+            border-color: var(--default-background-color);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container_principal"><div class="container container_secundario"><img src="./image02.jpg" alt=""><h1>PinkDelfins</h1><h2>M31-2024 • UTFPR • EQUIPE ROSA</h2><div class="tabela"><div class="tabela_title"><p><strong>Quem nós somos?</strong></p></div><div class="tabela_content">Somos o primeiro ano do Curso Técnico Integrado em Informática para Internet da UTFPR-CM de 2024!</div></div><div class="tabela"><div class="tabela_title"><p><strong>Sobre a gincana!</strong></p></div><div class="tabela_content">Todos os anos, o curso técnico da UTFPR-CM, realiza uma gincana, com provas recreativas, esportivas, culturais e filantrópicas, afim de promover maior interação entre os alunos e as turmas do técnico!</div></div></div><div class="container container_secundario"><div class="tabela2"><div class="tabela"><div class="tabela_title"><p><strong>Doações:</strong></p></div><div class="tabela_content">Doação de sangue</div></div><div class="tabela"><div class="tabela_title"></div><div class="tabela_content">Cadastro para doação de medula</div></div><div class="tabela"><div class="tabela_title"></div><div class="tabela_content">Doação de alimento para a casa de passagem</div></div><div class="tabela"><div class="tabela_title"></div><div class="tabela_content">Doação de lacres para troca em cadeira de rodas</div></div></div>
+    <div class="container_text">
+        <p><strong>Doe sangue!</strong></p>
+        <svg style="margin: 0px auto;"><g><path d="M0 0 L500 0" style="stroke: #D43376; stroke-width: 3px;"></path></g></svg>
+        <p>A doação de sangue deve ser agendada pelo site: <a href="https://www.saude.pr.gov.br/servicos/Saude/Doacoes/Agendar-doacao-de-sangue-no-Hemepar-xv3Kqxo1">Doação de Sangue;</a></p>
+        <br>
+        <p><strong>Doe medula!</strong></p>
+        <svg style="margin: 0px auto;"><g><path d="M0 0 L500 0" style="stroke: #D43376; stroke-width: 3px;"></path></g></svg>
+        <p>O cadastro para doação de medula deve ser agendado diretamente no Hemonúcleo de Campo Mourão, (R. Mambore, 1500, Centro, Campo Mourão);</p>
+        <br>
+        <p><strong>Doe alimento!</strong></p>
+        <svg style="margin: 0px auto;"><g><path d="M0 0 L500 0" style="stroke: #D43376; stroke-width: 3px;"></path></g></svg>
+        <p>A doação de alimentos será destinada a Casa de Passagem de Campo Mourão, as doações podem ser feitas nas caixas que se encontram na frente dos principais mercados da cidade, ou diretamente aos alunos da M31;</p>
+        <br>
+        <p><strong>Doe lacres!</strong></p>
+        <svg style="margin: 0px auto;"><g><path d="M0 0 L500 0" style="stroke: #D43376; stroke-width: 3px;"></path></g></svg>
+        <p>Os lacres de latinhas devem ser juntados em garrafas pet de 2 litros, que podem ser entregues diretamente aos alunos. A cada 140 garrafas, conseguimos realizar a troca em uma cadeira de rodas!</p>
+        <br>
+        <p><strong>Seja um patrocinador!!</strong></p>
+        <svg style="margin: 0px auto;"><g><path d="M0 0 L500 0" style="stroke: #D43376; stroke-width: 3px;"></path></g></svg>
+        <p>Entre em contato com a nossa líder, via WhatsApp ou email: (43) 8844-9090, larafuzii@gmail.com</p>
+        <br>
+
+    </div>
+</div></div>
+</body>
+</html>
