@@ -7,6 +7,8 @@ const filtros = document.getElementsByClassName("filtro")
 const menu_vertical = document.getElementsByClassName("menu_vertical")
 var login = false
 var generos = ""
+let idiomas =""
+let price=""
 function filtro_collapsable_chec(){
     for(let i=0; i<document.getElementsByClassName("filtros").length; i++){
         if(document.getElementsByClassName("filtros")[i].checked & document.getElementById(document.getElementsByClassName("filtros")[i].id+"_container").style.gridTemplateRows!="1fr"){
@@ -19,6 +21,7 @@ function filtro_collapsable_chec(){
     }
 }
 function preco_slider_custom(){
+    price=""
     if(preco_slider.value == preco_slider.max){
         document.getElementById("preco_output").style.display='none'
         document.getElementById("qualquer").style.display='block'
@@ -27,12 +30,15 @@ function preco_slider_custom(){
     else if(preco_slider.value == preco_slider.min){
         document.getElementById("preco_output").style.display='none'
         document.getElementById("gratis").style.display='block'
+        price="&maxprice=free"
     }
     else{
         document.getElementById("preco_output").style.display='block'
         document.getElementById("qualquer").style.display='none'
         document.getElementById("gratis").style.display='none'
+        price="&maxprice="+preco_slider.value
     }
+    
 }
 function init(){
     filtro_collapsable_chec()
@@ -50,8 +56,8 @@ conta_button.addEventListener("click",function(){
     }
 })
 procura.addEventListener("input",function(){
-    
-    search_form.action="https://store.steampowered.com/search/?term="+search.value+generos+"&ndl=1"
+    preco_slider_custom()
+    search_form.action="https://store.steampowered.com/search/?term="+search.value+price+generos+idiomas+"&ndl=1"
 })
 for(let i=0; i<document.getElementsByClassName("filtros").length; i++){
     if(document.getElementsByClassName("filtros")[i].checked & document.getElementById(document.getElementsByClassName("filtros")[i].id+"_container").style.gridTemplateRows!="1fr"){
@@ -71,6 +77,7 @@ preco_slider.addEventListener("input",function(){
 })
 function filtros_chec(){
     generos=""
+    idiomas=""
     for(let i=0; i<filtros.length; i++){
         if(filtros[i].classList.contains("gen_filtro")){
             if(filtros[i].checked){
@@ -79,6 +86,16 @@ function filtros_chec(){
                 }
                 else{
                     generos+="%2C"+filtros[i].name
+                }
+            }
+        }
+        if(filtros[i].classList.contains("idm_filtro")){
+            if(filtros[i].checked){
+                if(idiomas==""){
+                    idiomas+="&supportedlang="+filtros[i].name
+                }
+                else{
+                    idiomas+="%2C"+filtros[i].name
                 }
             }
         }
