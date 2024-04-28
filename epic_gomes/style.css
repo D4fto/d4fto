@@ -1,8 +1,8 @@
 :root{
     --menu-horizontal-color: rgb(21, 31, 51);
     --menu-vertical-color: color-mix(in srgb, var(--menu-horizontal-color) 100%, rgb(0, 0, 0) 10%);
-    --menu-horizontal-height: 50px;
-    --menu-vertical-width: 150px;
+    --menu-horizontal-height: 70px;
+    --menu-vertical-width: 200px;
     --scrollbar-width:5px;
     --colunas: 6;
 }
