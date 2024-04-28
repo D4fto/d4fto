@@ -10,6 +10,7 @@ var generos = ""
 let idiomas =""
 let price=""
 let price_filtro=""
+
 function filtro_collapsable_chec(){
     for(let i=0; i<document.getElementsByClassName("filtros").length; i++){
         if(document.getElementsByClassName("filtros")[i].checked & document.getElementById(document.getElementsByClassName("filtros")[i].id+"_container").style.gridTemplateRows!="1fr"){
