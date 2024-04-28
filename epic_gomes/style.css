@@ -142,12 +142,13 @@ body{
     position: fixed;
     background-color: var(--menu-vertical-color);
     z-index: 2;
-    overflow-x: hidden;
+    overflow-x: visible;
     overflow-y: scroll;
     margin-top: var(--menu-horizontal-height);
     width: var(--menu-vertical-width);
     height: calc(100vh - 10px - var(--menu-horizontal-height));
     padding: 10px 10px 0px 15px;
+    transition: all 500ms;
 }
 .menu_vertical::-webkit-scrollbar{
     background: none;
@@ -288,6 +289,7 @@ input[type="range"]::-webkit-slider-thumb:hover{
 .jogo > div:hover{
     filter: brightness(75%);
     transform: translateY(-15px);
+    
     /* animation: sobe_desce 1s infinite alternate-reverse ease-in-out; */
 }
 /* @keyframes sobe_desce {
@@ -373,6 +375,25 @@ input[type="range"]::-webkit-slider-thumb:hover{
     height: calc(100vh - var(--menu-horizontal-height));
     pointer-events: none;
 }
+#menu_vertical_chec:checked~.menu_vertical, #menu_vertical_chec:checked~#menu_vertical_chec_label{
+    transform: translate(0);   
+}
+#menu_vertical_chec_label{
+    display: none;
+    position: fixed;
+    left: calc(var(--menu-vertical-width) + 25px);
+    top: var(--menu-horizontal-height);
+    padding: 0;
+    z-index: 5;
+    transition: all 500ms;
+}
+#menu_vertical_chec_label span{
+    font-size: 2em;
+    background-color: var(--menu-horizontal-color);
+    padding: 7px;
+    border-radius: 0 25% 25% 0;
+}
+
 @media (max-width:2000px) {
     :root{
         --colunas: 5;
@@ -399,6 +420,13 @@ input[type="range"]::-webkit-slider-thumb:hover{
         width: 100vw;
         margin-left: 0px;
     }
+    #menu_vertical_chec_label{
+        display: unset;
+        transform: translate(calc(var(--menu-vertical-width)*-1 - 25px))
+    }
+    #menu_vertical_chec:checked~.menu_vertical{
+        background-color: color-mix(in srgb, var(--menu-vertical-color) 97%, transparent);
+    } 
 }
 @media (max-width:500px) {
     :root{
