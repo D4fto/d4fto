@@ -37,8 +37,7 @@ body{
 }
 
 .menu_horizontal{
-    overflow-y: visible;
-    overflow-x: scroll;
+    
     z-index: 2;
     text-align: center;
     position: fixed;
@@ -49,9 +48,14 @@ body{
     background-color: var(--menu-horizontal-color);
 }
 .menu_horizontal ul{
-    
-    
+    overflow-y: visible;
+    overflow-x: scroll;
     text-wrap: nowrap;
+    width: calc(100vw - var(--menu-horizontal-height)*2);
+    margin-left: var(--menu-horizontal-height);
+}
+.menu_horizontal ::-webkit-scrollbar{
+    display: none;
 }
 .menu_horizontal li{
     display: inline-block;
@@ -283,8 +287,17 @@ input[type="range"]::-webkit-slider-thumb:hover{
 }
 .jogo > div:hover{
     filter: brightness(75%);
-    transform: translateY(-10px);
+    transform: translateY(-15px);
+    /* animation: sobe_desce 1s infinite alternate-reverse ease-in-out; */
 }
+/* @keyframes sobe_desce {
+    0%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(-15px);
+    }
+} */
 .jogo > div{
     cursor: pointer;
     width: 90%;
