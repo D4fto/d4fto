@@ -3,7 +3,8 @@
     --menu-vertical-color: color-mix(in srgb, var(--menu-horizontal-color) 100%, rgb(0, 0, 0) 10%);
     --menu-horizontal-height: 50px;
     --menu-vertical-width: 150px;
-    --scrollbar-width:5px
+    --scrollbar-width:5px;
+    --colunas: 6;
 }
 *{
     
@@ -119,12 +120,17 @@ body{
     display: none;
 }
 #painel{
+    display: grid;
+    grid-template-columns: repeat(var(--colunas), 1fr);
     margin-top: var(--menu-horizontal-height);
     text-align: center;
-    padding: 25px;
-    width: calc(100vw - var(--menu-vertical-width));
+    padding: 25px 0px 25px 0px;
+    width: calc(100vw - var(--menu-vertical-width) - 25px);
+    margin-left: calc(var(--menu-vertical-width) + 25px);
+    animation: loading 1s infinite linear;
 }
 .menu_vertical{
+    position: fixed;
     background-color: var(--menu-vertical-color);
     z-index: 2;
     overflow-x: hidden;
@@ -146,7 +152,7 @@ body{
 }
 .menu_vertical input[type='text']{
     background-color: color-mix(in srgb, var(--menu-horizontal-color) 100%, rgb(58, 133, 146) 20%);
-    width: calc(var(--menu-vertical-width) - 10px*2 - var(--scrollbar-width));
+    width: calc(var(--menu-vertical-width) - 15px);
     border-radius: 5px;
     padding: 3px 5px;
     border: none;
@@ -183,6 +189,7 @@ body{
 .menu_vertical header{
     background-color: rgb(32, 43, 61);
     padding: 3px 6px;
+    cursor: pointer;
 }
 .caixa_filtros{
     display: grid;
@@ -231,6 +238,9 @@ input[type="range"]::-webkit-slider-thumb{
     width: 15px;
     border-radius: 100%;
 }
+input[type="range"]::-webkit-slider-thumb:hover{
+    background: rgb(98, 121, 148);
+}
 
 .caixa_filtros_container{
     display: grid;
@@ -243,4 +253,101 @@ input[type="range"]::-webkit-slider-thumb{
 }
 .range_preco input{
     margin-bottom: 9px;
+}
+.caixa_filtros li.active{
+    background-image: linear-gradient(135deg,#63B9EA,#4887AB);
+    color: rgb(255, 255, 255);
+}
+.caixa_filtros li{
+    
+    transition: all 500ms;
+    line-height: 20px;
+    color: rgb(189, 206, 221);
+}
+.caixa_filtros li:not(.preco){
+    cursor: pointer;
+}
+.caixa_filtros li:hover:not(.preco){
+    background-color: color-mix(in srgb, var(--menu-vertical-color) 100%, rgb(191, 203, 255) 5%);
+}
+.jogo{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.jogo > div:hover{
+    filter: brightness(75%);
+}
+.jogo > div{
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+}
+.jogo img{
+    width: 100%;
+    
+}
+.jogo div div{
+    transform: translateY(-4px);
+    background-color: #263d4b;
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+    text-indent: 10px;
+    padding: 5px 0 5px 0;
+}
+.preco_antigo{
+    text-decoration: line-through;
+    color: rgb(129, 150, 167);
+    font-size: 0.75em;
+}
+.preco_antigo+.preco_atual{
+    color: rgb(255, 255, 255);
+    
+}
+.preco_atual span{
+    background-color: rgb(81, 206, 31);
+    color: white;
+    padding: 0 2px 0 2px;
+    text-align: right;
+}
+.avaliacao{
+    color: rgb(255, 255, 0);
+}
+::-webkit-scrollbar{
+    background: none;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(51, 77, 92);
+    border: 4px solid var(--menu-horizontal-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--menu-horizontal-color);
+}
+@media (max-width:1500px) {
+    :root{
+        --colunas: 5;
+    }
+}
+@media (max-width:1250px) {
+    :root{
+        --colunas: 4;
+    }
+}
+@media (max-width:1000px) {
+    :root{
+        --colunas: 3;
+    }
+}
+@media (max-width:750px) {
+    :root{
+        --colunas: 2;
+    }
+}
+@media (max-width:500px) {
+    :root{
+        --colunas: 1;
+    }
 }

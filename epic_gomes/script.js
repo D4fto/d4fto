@@ -9,6 +9,7 @@ var login = false
 var generos = ""
 let idiomas =""
 let price=""
+let price_filtro=""
 function filtro_collapsable_chec(){
     for(let i=0; i<document.getElementsByClassName("filtros").length; i++){
         if(document.getElementsByClassName("filtros")[i].checked & document.getElementById(document.getElementsByClassName("filtros")[i].id+"_container").style.gridTemplateRows!="1fr"){
@@ -57,7 +58,7 @@ conta_button.addEventListener("click",function(){
 })
 procura.addEventListener("input",function(){
     preco_slider_custom()
-    search_form.action="https://store.steampowered.com/search/?term="+search.value+price+generos+idiomas+"&ndl=1"
+    search_form.action="https://store.steampowered.com/search/?term="+search.value+price+generos+idiomas+price_filtro+"&ndl=1"
 })
 for(let i=0; i<document.getElementsByClassName("filtros").length; i++){
     if(document.getElementsByClassName("filtros")[i].checked & document.getElementById(document.getElementsByClassName("filtros")[i].id+"_container").style.gridTemplateRows!="1fr"){
@@ -69,7 +70,7 @@ for(let i=0; i<document.getElementsByClassName("filtros").length; i++){
     }
 }
 document.addEventListener("input",function(){
-    
+    filtros_chec()
 })
 preco_slider.addEventListener("input",function(){
     preco_slider_custom()
@@ -78,7 +79,15 @@ preco_slider.addEventListener("input",function(){
 function filtros_chec(){
     generos=""
     idiomas=""
+    price_filtro=""
     for(let i=0; i<filtros.length; i++){
+        if(filtros[i].checked){
+            filtros[i].parentElement.parentElement.classList.add("active")
+            
+        }
+        else if(filtros[i].parentElement.parentElement.classList.contains("active")){
+            filtros[i].parentElement.parentElement.classList.remove("active")
+        }
         if(filtros[i].classList.contains("gen_filtro")){
             if(filtros[i].checked){
                 if(generos==""){
@@ -99,9 +108,17 @@ function filtros_chec(){
                 }
             }
         }
+        if(filtros[i].classList.contains("price_filtro")){
+            if(filtros[i].checked){
+                
+                price_filtro+=filtros[i].name
+            }
+        }
     }
 }
 menu_vertical[0].addEventListener("input", function(){
-    filtros_chec()
     filtro_collapsable_chec()
 })
+function redirecionar(addres){
+    window.location.href=addres
+}

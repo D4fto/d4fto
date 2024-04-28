@@ -34,10 +34,11 @@
   content: "\2713";
   position: absolute;
   top: 50%;
-  left: 0.75em;
+  left: 0.40em;
   transform: translate(-50%, -50%);
-  font-size: 0.5em;
-  color: #FFF;
+  font-size: 1em;
+  font-weight: 900;
+  color: #63B9EA;
   opacity: 0;
   transition: all 0.2s ease;
 }
@@ -45,8 +46,8 @@
   background: #DDD;
 }
 .checkbox input:checked + label::before {
-  background: #388ae7;
-  border-color: #388ae7;
+  background: #FFF;
+  border-color: #FFF;
 }
 .checkbox input:checked + label::after {
   opacity: 1;
