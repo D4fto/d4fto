@@ -7,7 +7,7 @@
     --colunas: 6;
 }
 *{
-    
+    font-size: 16px;
     padding: 0px;
     
     margin: 0px;
@@ -127,7 +127,6 @@ body{
     display: grid;
     grid-template-columns: repeat(var(--colunas), 1fr);
     margin-top: var(--menu-horizontal-height);
-    text-align: center;
     padding: 25px 0px 25px 0px;
     width: calc(100vw - var(--menu-vertical-width) - 25px);
     margin-left: calc(var(--menu-vertical-width) + 25px);
