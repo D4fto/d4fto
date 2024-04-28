@@ -18,7 +18,7 @@ li{
 }
 body{
     overflow: auto;
-    background-color: rgb(21, 40, 56);
+    background-color: #152838;
     color: white;
     display: flex;
 }
@@ -124,13 +124,15 @@ body{
     display: none;
 }
 #painel{
+    
     display: grid;
     grid-template-columns: repeat(var(--colunas), 1fr);
     margin-top: var(--menu-horizontal-height);
-    padding: 25px 0px 25px 0px;
+    padding: 25px;
     width: calc(100vw - var(--menu-vertical-width) - 25px);
     margin-left: calc(var(--menu-vertical-width) + 25px);
     animation: loading 1s infinite linear;
+    
 }
 .menu_vertical{
     position: fixed;
@@ -346,28 +348,37 @@ input[type="range"]::-webkit-slider-thumb:hover{
 ::-webkit-scrollbar-track{
     background-color: var(--menu-horizontal-color);
 }
-@media (max-width:1500px) {
+@media (max-width:1750px) {
     :root{
         --colunas: 5;
     }
 }
-@media (max-width:1250px) {
+@media (max-width:1500px) {
     :root{
         --colunas: 4;
     }
 }
-@media (max-width:1000px) {
+@media (max-width:1250px) {
     :root{
         --colunas: 3;
     }
 }
-@media (max-width:750px) {
+@media (max-width:1000px) {
     :root{
         --colunas: 2;
     }
 }
-@media (max-width:500px) {
+@media (max-width:750px) {
     :root{
         --colunas: 1;
     }
+}
+#painel_filtro{
+    background: linear-gradient(180deg, rgba(10, 10, 46, 0) 90%, rgb(12, 24, 34) 100%);
+    position: fixed;
+    margin-top: var(--menu-horizontal-height);
+    width: calc(100vw - var(--menu-vertical-width) - 25px);
+    margin-left: calc(var(--menu-vertical-width) + 25px);
+    height: calc(100vh - var(--menu-horizontal-height));
+    pointer-events: none;
 }
