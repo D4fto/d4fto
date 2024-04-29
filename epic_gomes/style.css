@@ -6,12 +6,16 @@
     --scrollbar-width:5px;
     --colunas: 6;
 }
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 *{
     font-size: 20px;
     padding: 0px;
     
     margin: 0px;
     
+}
+.relative{
+    display: relative;
 }
 li{
     list-style: none;
@@ -105,7 +109,7 @@ body{
     --img-padding: calc(var(--menu-horizontal-height)/5/2);
 }
 .menu_horizontal div{
-    --seta-size:1.5rem;
+    --seta-size:2.5rem;
     overflow: hidden;
     position: fixed;
     width: var(--menu-horizontal-height);
@@ -119,13 +123,13 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     
 }
-.menu_horizontal span{
+.menu_horizontal i{
     font-size: var(--seta-size);
     line-height: var(--menu-horizontal-height);
     transition: all 500ms;
 }
-.menu_horizontal span:hover{
-    --seta-size: 2rem;
+.menu_horizontal i:hover{
+    --seta-size: 3em
 }
 .invisivel{
     display: none;
@@ -267,20 +271,25 @@ input[type="range"]::-webkit-slider-thumb:hover{
 .range_preco input{
     margin-bottom: 9px;
 }
-.caixa_filtros li.active{
-    background-image: linear-gradient(135deg,#63B9EA,#4887AB);
-    color: rgb(255, 255, 255);
+.caixa_filtros ul{
+    display: flex;
+    flex-direction: column;
 }
-.caixa_filtros li{
+.caixa_filtros ul > label{
     
     transition: all 500ms;
     line-height: 20px;
     color: rgb(189, 206, 221);
 }
-.caixa_filtros li:not(.preco){
+.caixa_filtros .active{
+    background-image: linear-gradient(135deg,#63B9EA,#4887AB);
+    color: rgb(255, 255, 255);
+    order: -1;
+}
+.caixa_filtros ul > label:not(.preco){
     cursor: pointer;
 }
-.caixa_filtros li:hover:not(.preco){
+.caixa_filtros ul > label:hover:not(.preco){
     background-color: color-mix(in srgb, var(--menu-vertical-color) 100%, rgb(191, 203, 255) 5%);
 }
 .jogo{
@@ -396,7 +405,9 @@ input[type="range"]::-webkit-slider-thumb:hover{
     padding: 7px;
     border-radius: 0 25% 25% 0;
 }
-
+li.preco{
+    order: -50;
+}
 @media (max-width:2000px) {
     :root{
         --colunas: 5;
