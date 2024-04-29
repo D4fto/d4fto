@@ -64,7 +64,8 @@ function shuffle(array) {
         array[randomIndex], array[currentIndex]];
     }
 }
-for(let i = 0; i<500;i++){
+shuffle(bd)
+for(let i = 0; i<1000;i++){
     linha=Math.floor(Math.random()*bd.length)
     linha=i%bd.length
     create_game(bd[linha][0],bd[linha][1],bd[linha][2],bd[linha][3],bd[linha][4],bd[linha][5],bd[linha][6])
