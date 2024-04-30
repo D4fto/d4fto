@@ -6,6 +6,7 @@ console.log(usuario_input.value)
 let contas = [
     ['123456',"D4fto","pedrohenriquetunes1@gmail.com"],
     ['123456789',"Admin","Admin@gmail.com"],
+    ['464446',"Zé Galinha","zegalinha@gmail.com"],
 ]
 function mostrar_senha(){
     if(senha_input.type === 'password'){
@@ -16,7 +17,6 @@ function mostrar_senha(){
         senha_input.setAttribute('type','password')
         senha_input.nextElementSibling.classList.replace('bi-eye-slash-fill','bi-eye-fill')
     }
-    console.log(senha_input.value)
     
 }
 function verificar_login(){
@@ -24,7 +24,7 @@ function verificar_login(){
         if(contas[i].includes(usuario_input.value)){
             if(contas[i][0]===senha_input.value){
                 sessionStorage.setItem('login',true)
-                sessionStorage.setItem('user',usuario_input.value)
+                sessionStorage.setItem('user',contas[i][1])
                 form_login.action="./conta.html"
             }
         }

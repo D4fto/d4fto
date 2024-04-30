@@ -399,15 +399,17 @@ input[type="range"]::-webkit-slider-thumb:hover{
     z-index: 5;
     transition: all 500ms;
 }
-#menu_vertical_chec_label span{
+#menu_vertical_chec_label i{
     font-size: 2em;
     background-color: var(--menu-horizontal-color);
     padding: 7px;
     border-radius: 0 25% 25% 0;
+    cursor: pointer;
 }
 li.preco{
     order: -50;
 }
+
 @media (max-width:2000px) {
     :root{
         --colunas: 5;
