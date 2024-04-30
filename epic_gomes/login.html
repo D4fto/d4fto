@@ -101,12 +101,12 @@
     <section id="painel_login"style="width: 100vw; margin-top: var(--menu-horizontal-height); text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <form action="#" method="get" id="form_login">
             <div class="relative">
-                <input type="text" name="usuario" id="usuario" oninput="verificar_usuario()">
+                <input type="text" name="usuario" id="usuario" oninput="verificar_usuario()" placeholder="Usuario ou Email">
                 <i class="bi bi-x-lg" style="display: none;"></i>
                 <p style="text-align: left; padding: 2px 15px; font-size: 0.75em; color: red; display: none; font-family: 'Courier New', Courier, monospace;" id="usuario_erro">Usuário não encontrado</p>
             </div>
             <div class="relative">
-                <input type="password" name="login_pass" id="login_pass">
+                <input type="password" name="login_pass" id="login_pass" placeholder="Senha">
                 <i class="bi bi-eye-fill" onclick="mostrar_senha()"></i>
             </div>
             <input type="submit" value="login" onclick="verificar_login()">
