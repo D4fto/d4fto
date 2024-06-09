@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+        body{
+            background-color: rgb(48, 48, 48);
+        }
+        p{
+            color: white;
+        }
+        .paragrafo{
+            color: aqua;
+        }
+        #primeiro{
+            color: red;
+        }
+        #primeiro+div{
+            background-color: aquamarine;
+        }
+        h1~p{
+            color: black;
+        }
+        h1, h2{
+            background-color: yellow;
+        }
+        .preto p{
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <p style="text-align: center;">
-        Texto do parágrafo
-    </p>
+    <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nemo eos facere, rem quis necessitatibus. Quo nobis modi, possimus expedita laudantium omnis reprehenderit saepe quidem unde amet. Molestiae, voluptas maiores.</p>
+    <p id="primeiro" class="paragrafo">Texto do parágrafo</p>
+    <div>
+        <h1>titulo</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus totam labore unde placeat, impedit rem autem nulla beatae! Suscipit ea possimus repudiandae, neque eaque sapiente quae nemo impedit rerum id?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium perferendis commodi assumenda odio ut magni minima voluptas voluptates labore porro rerum quis eius beatae reprehenderit, quae ea praesentium dolorem. Expedita.</p>
+    </div>
+    <div>
+        <h2>titulo 2</h2>
+        <p class="paragrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus totam labore unde placeat, impedit rem autem nulla beatae! Suscipit ea possimus repudiandae, neque eaque sapiente quae nemo impedit rerum id?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium perferendis commodi assumenda odio ut magni minima voluptas voluptates labore porro rerum quis eius beatae reprehenderit, quae ea praesentium dolorem. Expedita.</p>
+    </div>
+    <div class="preto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptas veritatis molestiae molestias distinctio ad voluptates consequuntur sint dignissimos deserunt, dolor minima aliquam veniam optio! Iusto rem tenetur temporibus ipsam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ab possimus error dolor? Tempora architecto blanditiis corrupti, pariatur natus soluta consectetur perferendis aliquid odit ab consequuntur voluptates atque excepturi neque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias minima commodi suscipit magnam praesentium nesciunt est et, facere exercitationem sunt molestiae id? Eum excepturi, facere ut odio vitae rem voluptate!</p>
+    </div>
 </body>
 </html>

@@ -7,6 +7,7 @@ let contas = [
     ['123456',"D4fto","pedrohenriquetunes1@gmail.com"],
     ['123456789',"Admin","Admin@gmail.com"],
     ['464446',"Zé Galinha","zegalinha@gmail.com"],
+    ['6924',"jalin rabei","6924@gmail.cum"]
 ]
 function mostrar_senha(){
     if(senha_input.type === 'password'){
@@ -36,7 +37,8 @@ function verificar_usuario(){
         usuario_input.nextElementSibling.style.display = ''
     }
     for(let i = 0; i<contas.length; i++){
-        if(contas[i].includes(usuario_input.value)){
+        console.log("ALFABETO".toLowerCase())
+        if((contas[i]).includes((usuario_input.value))){
             existe=true
             break
         }
