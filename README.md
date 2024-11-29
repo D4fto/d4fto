@@ -46,6 +46,7 @@
 
 <div align="center">
   <img height="200" src="https://d4fto.github.io/images/agroview.png"  />
+  <img height="200" src="https://d4fto.github.io/images/cnhSkills.png"  />
 </div>
 
 ###
