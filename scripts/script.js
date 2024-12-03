@@ -34,3 +34,23 @@ function switchTheme(element){
     return
 
 }
+function loadProjects(){
+    let links = [
+        'https://epicgomes.onrender.com/',
+        'https://agroview-sjsk.onrender.com/',
+        'https://sapatariapf.onrender.com/',
+    ]
+    for (const element of links) {
+        console.log('tentando acessar '+element)
+        fetch(element,{
+            method: 'GET',
+            mode: 'no-cors'
+        }).then(()=>{
+            console.log(element+' foi acessado')
+        })
+    }
+}
+loadProjects()
+setInterval(()=>{
+    loadProjects()
+},45000)
