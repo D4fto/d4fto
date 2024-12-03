@@ -21,8 +21,14 @@ function switchTheme(element){
     if(element.classList.contains('bi-moon-fill')){
         element.classList.remove('bi-moon-fill')
         element.classList.add('bi-sun-fill')
+        document.documentElement.style.setProperty('--color1', '#eee')
+        document.documentElement.style.setProperty('--color2', '#000')
+        document.documentElement.style.setProperty('--color4', '#f5f5ef')
         return
     }
+    document.documentElement.style.setProperty('--color1', '#0c0c0b')
+    document.documentElement.style.setProperty('--color2', '#fff')
+    document.documentElement.style.setProperty('--color4', '#141413')
     element.classList.add('bi-moon-fill')
     element.classList.remove('bi-sun-fill')
     return
