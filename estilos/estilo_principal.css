@@ -225,6 +225,9 @@ path{
     }
 
 }
+a{
+    color: #e5ff00
+}
 .project:nth-child(even){
     background-color: red;
     background-image: url('https://d4fto.github.io/images/flappyIAcover.png');
