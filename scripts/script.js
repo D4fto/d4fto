@@ -68,7 +68,7 @@ function getOrCreateUserId() {
 function enviarMensagem() {
     const webhookURL = "https://discord.com/api/webhooks/1381406562135838740/CnguClKP8ecjfBFKy-dZVXzrqV_avWaG59zeRgagbsWohXwUz4QmScPv0VdqDYNeUaX9";
     const data = {
-        content: `Acessaram meu portfólio ${new Date().toLocaleString()} : ${getOrCreateUserId()}`
+        content: `Acessaram meu portfólio ${new Date().toLocaleString()} : ${getOrCreateUserId()}\n----------------------------------------------------`
     };
 
     fetch(webhookURL, {
