@@ -55,18 +55,28 @@ setInterval(()=>{
     loadProjects()
 },45000)
 
-function enviarMensagem() {
-const webhookURL = "https://discord.com/api/webhooks/1381406562135838740/CnguClKP8ecjfBFKy-dZVXzrqV_avWaG59zeRgagbsWohXwUz4QmScPv0VdqDYNeUaX9";
-const data = {
-    content: `Acessaram meu portfólio ${new Date().toLocaleString()}`
-};
+function getOrCreateUserId() {
+    let userId = localStorage.getItem('user_id');
+    if (!userId) {
+        userId = crypto.randomUUID();
+        localStorage.setItem('user_id', userId);
+    }
+    return userId;
+}
 
-fetch(webhookURL, {
-    method: "POST",
-    headers: {
-    "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-})
+
+function enviarMensagem() {
+    const webhookURL = "https://discord.com/api/webhooks/1381406562135838740/CnguClKP8ecjfBFKy-dZVXzrqV_avWaG59zeRgagbsWohXwUz4QmScPv0VdqDYNeUaX9";
+    const data = {
+        content: `Acessaram meu portfólio ${new Date().toLocaleString()} : ${getOrCreateUserId()}`
+    };
+
+    fetch(webhookURL, {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
 }
 enviarMensagem()
