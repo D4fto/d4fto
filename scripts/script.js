@@ -64,19 +64,14 @@ function getOrCreateUserId() {
     return userId;
 }
 
-
+//I fixed the webhook, try to send a troll message now LOL
 function enviarMensagem() {
-    const webhookURL = "https://discord.com/api/webhooks/1381406562135838740/CnguClKP8ecjfBFKy-dZVXzrqV_avWaG59zeRgagbsWohXwUz4QmScPv0VdqDYNeUaX9";
-    const data = {
-        content: `Acessaram meu portfólio ${new Date().toLocaleString()} : ${getOrCreateUserId()}\n----------------------------------------------------`
-    };
-
-    fetch(webhookURL, {
+    fetch("https://d4ftobackend.onrender.com/sendMessage", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({"userId": getOrCreateUserId()})
     })
 }
 enviarMensagem()
