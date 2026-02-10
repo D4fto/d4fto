@@ -28,12 +28,15 @@ export const getOrCreateUserId = (): string => {
 
 export const sendAnalytics = async (): Promise<void> => {
   try {
-    await fetch("http://18.218.162.124:8080/sendMessage", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ "userId": getOrCreateUserId() })
+    await fetch(import.meta.env.VITE_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        content: `📊 Acessaram meu portfólio
+        🕒 ${new Date().toLocaleString()}
+        🆔 ${getOrCreateUserId()}
+        ----------------------------------`,
+      }),
     });
   } catch (error) {
     console.error('Analytics error:', error);
