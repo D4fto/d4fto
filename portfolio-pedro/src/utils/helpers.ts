@@ -28,6 +28,7 @@ export const getOrCreateUserId = (): string => {
 
 export const sendAnalytics = async (): Promise<void> => {
   try {
+    console.log(":(")
     await fetch(import.meta.env.VITE_WEBHOOK, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
