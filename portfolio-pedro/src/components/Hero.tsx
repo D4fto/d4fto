@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
                   animate={{ backgroundPosition: '100% 50%' }}
                   transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse' }}
                   >
-                  Pedro Teste
+                  Pedro Tunes
                 </motion.span>
               </motion.h1>
               <div className="text-xl text-gray-300 mb-8">
