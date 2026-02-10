@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio - Pedro Tunes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Grey+Qo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=LXGW+WenKai+TC:wght@700&family=Parkinsans:wght@300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Unica+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./estilos/estilo_principal.css">
+        <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+        <link rel="stylesheet" href="./estilos/slider.css">
+        <script src="./scripts/script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Grey+Qo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=LXGW+WenKai+TC:wght@700&family=Parkinsans:wght@300..800&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Unica+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        
+        <input type="checkbox" id="chec">
+        
+        <nav class="menu_vertical">
+            <ul >
+                <li><a href="#about">About me</a></li>
+                <li><a href="#destaque">Projetos em destaque</a></li>
+                <li><a href="#projetos">Todos os projetos</a></li>
+                <li><a href="#contato">Contatos</a></li>
+            </ul>
+        </nav>
+        <nav class="menu_horizontal">
+            <label for="chec">
+                <svg class="naoselecionavel">
+                    <g>
+                        <path d="M2.5 2.5 L37.5 2.5"></path>
+                        <path d="M2.5 20 L37.5 20"></path>
+                        <path d="M2.5 37.5 L37.5 37.5"></path>
+                    </g>
+                </svg>
+            </label>
+            <ul >
+                <li>Portfólio</li>
+            </ul>
+
+        </nav>
+        <main>
+
+            <div id="about">
+                <div>
+                    <h1>Oi, eu sou o <br><span>Pedro Tunes 😃</span></h1>
+                    <a href="mailto:contatopedrotunes@gmail.com">Entrar em contato</a>
+                </div>
+                <div>
+                    <h1>Sobre mim</h1>
+                    <p>Desenvolvedor com habilidades em Node.js, React.js, C#, C++, Tailwind CSS, Javascript, Python, HTML5 CSS3, MySQL e consumo de APIs REST. Além de já ter tido contato com PHP, Java e GDScript. Atualmente cursando Curso Técnico Integrado em Informática para a Internet na UTFPR-CM.</p>
+                </div>
+            </div>
+            <h1 id="destaque">Projetos em destaque:</h1>
+    
+            <div class="projects">
+                <div class="project" onclick="showSeeMore(11)" name="planner">
+                    <div class="filtro"></div>
+                    <h2>D4fto's Planner</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-react"></i>
+                        <i class="ti ti-brand-tailwind"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+                <div class="project" onclick="showSeeMore(13)" name="gastos">
+                    <div class="filtro"></div>
+                    <h2>Investec</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-react"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+                <div class="project" onclick="showSeeMore(4)" name="agroview">
+                    <div class="filtro"></div>
+                    <h2>Agroview</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-nodejs"></i>
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+            </div>
+            <h1 id="projetos">Todos os projetos:</h1>
+            <div class="projects">
+                <div class="project" onclick="showSeeMore(1)" name="epicgomes">
+                    <div class="filtro"></div>
+                    <h2>Epic Gomes</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-nodejs"></i>
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                        <i class="ti ti-brand-mysql"></i>
+                    </span>
+                </div>
+                <div class="project" onclick="showSeeMore(12)" name="linuxdefender">
+                    <div class="filtro"></div>
+                    <h2> Linux Defender</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-c-sharp"></i>
+                        <i class="ti ti-brand-mysql"></i>
+                        
+                    </span>
+                </div>
+                <div class="project" onclick="showSeeMore(3)" name="flappyIA">
+                    <div class="filtro"></div>
+                    <h2>flappyIA</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+                <div class="project" name="comcam" onclick="showSeeMore(2)">
+                    <div class="filtro"></div>
+                    <h2>Comcam</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+                <div class="project" name="reaction" onclick="showSeeMore(5)">
+                    <div class="filtro"></div>
+                    <h2>Reaction</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+                <div class="project" name="linuxdefenderlegacy" onclick="showSeeMore(6)">
+                    <div class="filtro"></div>
+                    <h2>Linux Defender Legacy</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+                <div class="project" name="pong" onclick="showSeeMore(7)">
+                    <div class="filtro"></div>
+                    <h2>Pong da Vida</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-python"></i>
+                    </span>
+                </div>
+                <div class="project" name="sapataria" onclick="showSeeMore(8)">
+                    <div class="filtro"></div>
+                    <h2>Sapataria Passo Fino</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-nodejs"></i>
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                        <i class="ti ti-brand-mysql"></i>
+                    </span>
+                </div>
+                <div class="project" name="mouse" onclick="showSeeMore(9)">
+                    <div class="filtro"></div>
+                    <h2>Gyroscopic Mouse</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                        <i class="ti ti-brand-python"></i>
+                    </span>
+                </div>
+                <div class="project" name="unialert" onclick="showSeeMore(10)">
+                    <div class="filtro"></div>
+                    <h2>UniAlert</h2>
+                    <span class="techs">
+                        <i class="ti ti-brand-html5"></i>
+                        <i class="ti ti-brand-css3"></i>
+                        <i class="ti ti-brand-javascript"></i>
+                    </span>
+                </div>
+            </div>
+            <h1 id="contato">Contatos</h1>
+            <div id="contatos">
+                <div>
+                    <a href="mailto:contatopedrotunes@gmail.com" target="_blank"><i class="ti ti-mail"></i></a>
+                    <h1>E-mail</h1>
+                    <p>contatopedrotunes@gmail.com</p>
+                </div>
+                <div>
+                    <a href="https://linkedin.com/in/D4fto" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+                    <h1>Linkedin</h1>
+                    <p>@D4fto</p>
+                </div>
+                <div>
+                    <a href="https://github.com/D4fto" target="_blank"><i class="ti ti-brand-github"></i></a>
+                    <h1>Github</h1>
+                    <p>@D4fto</p>
+                </div>
+            </div>
+            <div class="seeMores">
+                <div class="seeMore" id="seem1">
+                    <div>
+                        <div>
+                            <h1>Epic Gomes</h1>
+                            <p>Epic Gomes é um projeto que inicialmente surgiu como um trabalho relacionado à banco de dados. Originalmente era feito com PHP mas o projeto foi migrado para Javascript, utilizando Node.js. <br>Inspirado por lojas de jogos online como: Steam, Epic Games e outros. Em andamento.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://epicgomes.onrender.com/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/epic_gomes" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem2">
+                    <div>
+                        <div>
+                            <h1>Comcam</h1>
+                            <p>Projeto que surgiu a partir de um trabalho de geografia, onde agrupamos dados de algumas cidades da região da Comcam. E com orientação da professora, expandimos o trabalho para esse site que reune e expõe informações de todas as cidades da Comcam. Concluido</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://comcam24-utfpr.onrender.com/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/comcam24" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem3">
+                    <div>
+                        <div>
+                            <h1>flappyIA</h1>
+                            <p>Projeto pessoal inspirado em um vídeo do canal <a href="https://www.youtube.com/c/UniversoProgramado" target="_blank">Universo Programado</a>, com o intuido de estudar sobre redes neurais a algoritmo genético. Atualmente em seu site mostra um IA já treinada. Em, andamento.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://d4fto.github.io/flappyIA/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/flappyIA" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem4">
+                    <div>
+                        <div>
+                            <h1>AgroView</h1>
+                            <p>Projeto feito em 48 horas para o hackathon "NASA Space Apps 2024", com o tema "Leveraging Earth Observation Data for Informed Agricultural Decision-Making". Desenvolvido com a função de auxiliar agricultores em suas tomadas de decisão. utilizando dados climáticos, para dizer se é um tempo por para plantio/colheita/pulverização. Para acessar o projeto no site oficial do hackathon e mais informações: <a href="https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/vibranium/?tab=project" target="_blank" >clique aqui</a>. Concluido.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://agroview-sjsk.onrender.com/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/gimenezhiago/hackathon-vibranium" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem5">
+                    <div>
+                        <div>
+                            <h1>Reaction</h1>
+                            <p>Projeto pessoal de um teste de tempo de reação. Esse projeto foi feito com o intuito de criar minha própia versão deste site <a href="https://humanbenchmark.com/tests/reactiontime/" target="_blank">humanbenchmark</a>. Concluido.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://d4fto.github.io/reaction/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/reaction" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem6">
+                    <div>
+                        <div>
+                            <h1>Linux Defender</h1>
+                            <p>Projeto pessoal de um jogo do tipo roguelike. Inspiradoo em um professor do meu ensino técnico que defendia o uso do Linux, criei esse jogo onde você derrota várias versões do Windows utilizando o pinguim do Linux como arma. Em andamento.</p>
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://d4fto.github.io/linuxDefender/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/linuxDefender" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem7">
+                    <div>
+                        <div>
+                            <h1>Pong da Vida</h1>
+                            <p>Projeto feito para um trabalho da matéria de algoritmos que mistura um jogo pong com o "Jogo da vida de Conway". feito em python com pygame e transferido para web com Pygbag.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://d4fto.github.io/pong/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/pong" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem8">
+                    <div>
+                        <div>
+                            <h1>Sapataria Passo Fino</h1>
+                            <p>Projeto feito para um trabalho da matéria de Banco de dados, com o intuito de modelar e desenvolver um sistema para uso interno em uma sapataria. Foi utilizado Node.js, MySQL e também foi necessário o uso de um servidor websocket para comunicação em tempo real. Finalizado.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://sapatariapf.onrender.com/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/sapatariaPF" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem9">
+                    <div>
+                        <div>
+                            <h1>Gyroscopic Mouse</h1>
+                            <p>Projeto pessoal pensado a partir de um problema para o controle de mouse durante uma apresentação. Para resolver isso desenvolvi um programa que controla o mouse remotamente utilizando o giroscópio do celular, se comunicando por rede WI-FI (não é necessário estar na mesma rede). Finalizado.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://github.com/D4fto/gyroscopicMouse" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem10">
+                    <div>
+                        <div>
+                            <h1>UniAlert</h1>
+                            <p>Projeto desenvolvido para a disciplina de geografia do ensino técnico em Informática. O projeto é uma landing page que mostra a importância de realizar um curso superior nos tempos de hoje. Finalizado.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+    
+                    </div>
+                    <div>
+                        <a href="https://d4fto.github.io/uniAlert/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/uniAlert" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem11">
+                    <div>
+                        <div>
+                            <h1>D4fto's Planner</h1>
+                            <p>Projeto próprio desenvolvido para estudo de React. Esse projeto é um calendário onde se pode anotar eventos ou tarefas que vão acontecer em certo dia. Com cores personalizadas, uma interface amigável e dinâmica. Finalizado.</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+                        
+                    </div>
+                    <div>
+                        <a href="https://d4fto.github.io/planner/" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/planner" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+                <div class="seeMore" id="seem12">
+                    <div>
+                        <div>
+                            <h1>linuxDefender</h1>
+                            <p>Projeto próprio originalmente feito para aprender à utilizar a game engine Godot e para ter o meu primeiro contato com a linguagem C#. Em andamento</p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+        
+                    </div>
+                    <div>
+                        <a href="https://d4fto.itch.io/linuxdefender" target="_blank">acessar projeto</a>
+                        <!-- <a href="https://github.com/D4fto/uniAlert" target="_blank">acessar repositório</a> -->
+                    </div>
+                </div>
+                <div class="seeMore" id="seem13">
+                    <div>
+                        <div>
+                            <h1>Investec</h1>
+                            <p>Projeto acadêmico criado com o objetivo de auxiliar no controle de despesas do usuário. Utilizando o framework React e consumindo a API google charts. Finalizado.
+                            </p>
+                            
+                        </div>
+                        <i class="bi bi-x" onclick="inActive(this.parentElement.parentElement)"></i>
+                        <div class="img"></div>
+        
+                    </div>
+                    <div>
+                        <a href="https://d4fto.github.io/ControleDeGastosDW2" target="_blank">acessar projeto</a>
+                        <a href="https://github.com/D4fto/ControleDeGastosDW2" target="_blank">acessar repositório</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
