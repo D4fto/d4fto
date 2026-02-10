@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -9,9 +9,12 @@ import './styles/App.css';
 
 function App() {
   const activeSection = useScrollSpy(['about', 'destaque', 'projetos', 'contato']);
+  const hasSentAnalytics = useRef(false);
 
   useEffect(() => {
-    // Send analytics on mount
+    if (hasSentAnalytics.current) return;
+    hasSentAnalytics.current = true;
+
     sendAnalytics();
 
     // Preload projects

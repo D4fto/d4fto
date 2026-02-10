@@ -49,13 +49,13 @@ const Contact: React.FC = () => {
               whileHover={{ y: -10, scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <motion.a
+              <motion.span
                 
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 transition={{ type: 'spring', stiffness: 200 }}
               >
                 <i className={`ti ${contact.icon}`} />
-              </motion.a>
+              </motion.span>
               <h2>{contact.label}</h2>
               <p>{contact.value}</p>
             </motion.a>

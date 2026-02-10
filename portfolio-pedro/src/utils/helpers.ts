@@ -48,10 +48,11 @@ export const preloadProjects = (): void => {
   ];
   
   links.forEach(link => {
+    console.log("loading "+link)
     fetch(link, {
       method: 'GET',
       mode: 'no-cors'
-    }).catch(() => {
+    }).then(()=>console.log(link + " loaded")).catch(() => {
       // Silent fail for preloading
     });
   });

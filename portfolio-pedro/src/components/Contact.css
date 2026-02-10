@@ -66,7 +66,7 @@
   box-shadow: 0 15px 40px rgba(152, 74, 255, 0.3);
 }
 
-.contact-card a {
+.contact-card span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +81,7 @@
   transition: var(--transition);
 }
 
-.contact-card:hover a {
+.contact-card:hover span {
   box-shadow: 0 15px 35px rgba(158, 74, 255, 0.5);
 }
 

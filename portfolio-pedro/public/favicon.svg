@@ -16,7 +16,8 @@
     font-size="28"
     font-weight="700"
     fill="#818cf8"
+    letter-spacing="2px"
     font-family="Inter, Arial, sans-serif">
-    { }
+    {P}
   </text>
 </svg>
