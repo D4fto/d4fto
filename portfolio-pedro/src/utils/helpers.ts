@@ -28,7 +28,7 @@ export const getOrCreateUserId = (): string => {
 
 export const sendAnalytics = async (): Promise<void> => {
   try {
-    await fetch("https://d4ftobackend.onrender.com/sendMessage", {
+    await fetch("http://18.218.162.124:8080/sendMessage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
