@@ -11,9 +11,17 @@ export const getTechIcon = (tech: Technology): string => {
     mysql: 'ti-brand-mysql',
     python: 'ti-brand-python',
     csharp: 'ti-brand-c-sharp',
-    tailwind: 'ti-brand-tailwind'
+    tailwind: 'ti-brand-tailwind',
+    prisma: 'ti-brand-prisma',        
+    postgresql: 'ti-database',
+    socketio: 'ti-plug-connected',
+    jwt: 'ti-key',
+    aws: 'ti-brand-aws',
+    vercel: 'ti-brand-vercel',
+    ai: 'ti-brain',
+    whatsapp: 'ti-brand-whatsapp'
   };
-  
+
   return iconMap[tech] || 'ti-code';
 };
 
@@ -28,16 +36,16 @@ export const getOrCreateUserId = (): string => {
 
 export const sendAnalytics = async (): Promise<void> => {
   try {
-    await fetch(import.meta.env.VITE_WEBHOOK, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        content: `📊 Acessaram meu portfólio
-        🕒 ${new Date().toLocaleString()}
-        🆔 ${getOrCreateUserId()}
-        ----------------------------------`,
-      }),
-    });
+    // await fetch(import.meta.env.VITE_WEBHOOK, {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     content: `📊 Acessaram meu portfólio
+    //     🕒 ${new Date().toLocaleString()}
+    //     🆔 ${getOrCreateUserId()}
+    //     ----------------------------------`,
+    //   }),
+    // });
   } catch (error) {
     console.error('Analytics error:', error);
   }

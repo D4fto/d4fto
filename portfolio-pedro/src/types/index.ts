@@ -10,7 +10,7 @@ export interface Project {
   featured?: boolean;
 }
 
-export type Technology = 
+export type Technology =
   | 'react'
   | 'nodejs'
   | 'html5'
@@ -20,7 +20,15 @@ export type Technology =
   | 'mysql'
   | 'python'
   | 'csharp'
-  | 'tailwind';
+  | 'tailwind'
+  | 'prisma'
+  | 'postgresql'
+  | 'socketio'
+  | 'jwt'
+  | 'aws'
+  | 'vercel'
+  | 'ai'
+  | 'whatsapp';
 
 export interface ContactInfo {
   type: 'email' | 'linkedin' | 'github';
