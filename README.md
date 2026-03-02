@@ -72,5 +72,5 @@
   <img src="https://streak-stats.demolab.com?user=d4fto&locale=en&mode=daily&theme=github_dark&hide_border=true&border_radius=5&order=3" height="200" alt="streak graph"  />
 </div>
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=d4fto&bg_color=0d1117&color=70A5FD&line=70A5FD&point=5e9bfd&area=true&hide_border=true&area=true&height=300&custom_title=Last+30+days+commits)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?d4fto=Ashutosh00710)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ###
